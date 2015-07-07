@@ -102,5 +102,7 @@ RoundDateInterval - это PHP-библиотека для округления 
 # Контакты
 
 Михалев Михаил
+
 Email: mail(at)mikhailmikhalev.ru
+
 Git: http://github.com/nhkey/

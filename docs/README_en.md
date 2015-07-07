@@ -1,4 +1,4 @@
-# Описание
+# Description
 
 RoundDateInterval is PHP-library for rounding of results work DateInterval.
 
@@ -126,5 +126,7 @@ Extend the class AbstractRoundDateProvider i.q. RoundDateProvider.
 # Contacts
 
 Mikhail Mikhalev
+
 Email: mail(at)mikhailmikhalev.ru
+
 Git: http://github.com/nhkey/
