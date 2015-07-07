@@ -1,0 +1,16 @@
+{
+  "name": "nhkey/Round-DateInterval",
+  "description": "Round of DateInterval",
+  "minimum-stability": "stable",
+  "license": "The MIT License (MIT)",
+  "keywords": ["DateInterval", "date", "round", "php"],
+  "authors": [
+    {
+      "name": "Mikhail Mikhalev",
+      "email": "mail@mikhailmikhalev.ru"
+    }
+  ],
+  "autoload": {
+    "psr-4": { "nhkey\\RoundDateInterval\\": "src\\" }
+  }
+}
