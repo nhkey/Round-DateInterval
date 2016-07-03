@@ -4,18 +4,18 @@ class RoundDateIntervalTest extends PHPUnit_Framework_TestCase{
 
     public function testRound(){
         $datetimes = [
-            ['2015-06-10', '2015-06-30', 'три недели', 'three weeks'],
-            ['2015-06-15', '2015-06-17', 'два дня', 'two days'],
-            ['2015-06-11', '2015-06-17', 'неделя', 'week'],
-            ['2015-06-03', '2015-06-30', 'месяц', 'month'],
-            ['2015-03-30', '2015-06-17', 'два месяца', 'two months'],
-            ['2015-01-30', '2015-07-17', 'полгода', 'half year'],
-            ['2015-06-15', '2015-07-27', 'полтора месяца', 'month and a half'],
-            ['2005-06-15', '2015-07-27', 'десять лет', 'ten years'],
-            ['2000-06-15', '2015-07-27', 'десять лет', 'ten years'],
-            ['1960-06-15', '2015-07-27', 'полвека', 'half century'],
-            ['1930-06-15', '2015-07-27', 'век', 'century'],
-            ['1650-06-15', '2015-07-27', 'век', 'century'],
+            ['2015-06-10', '2015-06-30', 'три недели', 'three weeks', 'trois semaines'],
+            ['2015-06-15', '2015-06-17', 'два дня', 'two days', 'deux jours'],
+            ['2015-06-11', '2015-06-17', 'неделя', 'week', 'semaine'],
+            ['2015-06-03', '2015-06-30', 'месяц', 'month', 'mois'],
+            ['2015-03-30', '2015-06-17', 'два месяца', 'two months', 'deux mois'],
+            ['2015-01-30', '2015-07-17', 'полгода', 'half year', 'six mois'],
+            ['2015-06-15', '2015-07-27', 'полтора месяца', 'month and a half', 'un mois et demi'],
+            ['2005-06-15', '2015-07-27', 'десять лет', 'ten years', 'dix ans'],
+            ['2000-06-15', '2015-07-27', 'десять лет', 'ten years', 'dix ans'],
+            ['1960-06-15', '2015-07-27', 'полвека', 'half century', 'demi siècle'],
+            ['1930-06-15', '2015-07-27', 'век', 'century', 'siècle'],
+            ['1650-06-15', '2015-07-27', 'век', 'century', 'siècle'],
         ];
 
         foreach ($datetimes as $datetime) {
@@ -31,6 +31,9 @@ class RoundDateIntervalTest extends PHPUnit_Framework_TestCase{
 
             $test->setDictionary(new \nhkey\RoundDateInterval\dictionaries\EngRoundDateDictionary());
             $this->assertEquals($test->get(), $datetime[3]);
+
+            $test->setDictionary(new \nhkey\RoundDateInterval\dictionaries\FreRoundDateDictionary());
+            $this->assertEquals($test->get(), $datetime[4]);
         }
     }
 
